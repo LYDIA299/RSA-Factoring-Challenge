@@ -3,9 +3,8 @@
 
 def factorize(num):
     factor2 = 0
-    stop_val = num // 2 + 1
 
-    for factor1 in range(2, stop_val):
+    for factor1 in range(2, num + 1):
         if num % factor1 == 0:
             factor2 = num // factor1
             if factor1 > factor2:
