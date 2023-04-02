@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+import sys
+import os
+from read_file import read_file
+
+
+def main():
+    arg_nbr = len(sys.argv)
+
+    # check is there are two arguments
+    if arg_nbr != 2:
+        print("Usage: factors <file>")
+        sys.exit(1)
+
+    #check if it's a file
+    #file_in = sys.argv[1]
+    #path = os.path.join(os.getcwd(), file_in)
+    if not os.path.isfile(sys.argv[1]):
+        print("Error: file < {} > does not exist!".format(sys.argv[1]))
+        sys.exit(1)
+
+    read_file(sys.argv[1])
+
+    return (0)
+
+if __name__ == "__main__":
+    main()
